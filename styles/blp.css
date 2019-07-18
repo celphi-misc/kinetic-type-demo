@@ -1,0 +1,355 @@
+
+	/* Be Like Pablo - Love is for the Living - Kinetic Type */
+	
+	body {
+		margin:			0;
+		padding:		0;
+		background:		#000;	
+		color:			#fff;
+		font-size:		62.5%;
+		font-family:	helvetica,arial, sans-serif;
+	}
+	
+	#layout {
+		width:			960px;
+		height:			540px;
+		border:			10px solid #fff;
+		box-shadow:		insert 0px 0px 20px #000;
+		position:		relative;
+		margin:			auto;
+		overflow:		hidden;
+		margin-top:		100px;
+	}
+	
+	#instructions {
+		position:		relative;
+		margin:			auto;
+		margin-top:		20px;
+		width:			960px;
+		text-align:		center;	
+	}
+	
+	.line span {
+		opacity:		0;
+		color:			#fff;
+		text-shadow:	0px 0px 5px #699;
+		-webkit-transition: all 0.1s linear;
+	}
+	
+	#verse1 .line span {
+		text-shadow:	1px 1px 0px #699;
+	}
+	
+	.line span.active {
+		opacity:		1;
+	}
+	
+	.line {
+		line-height:	1em;
+		-webkit-transition: all 0.8s linear;
+	}
+	
+	#vignette {
+		position:		absolute;
+		top:			0;
+		left:			0;
+		width:			960px;
+		height:			540px;
+		background:		transparent url(vignette.png) no-repeat top left;
+		cursor:			pointer;
+	}	
+	
+	#verse1 {
+		padding:		100px;
+		position:		absolute;
+		top:			0;
+		left:			0;
+		width:			5000px;
+		height:			5000px;
+		background:		transparent url(bg.jpg) repeat top left;
+		-webkit-transform-origin:top left;	
+		-webkit-transition: all 0.5s linear;	
+	}
+	
+	#verse1.scene2 {
+		background:		transparent url(newbg2.jpg) repeat top left;
+	}
+	
+	#verse1.scene3 {
+		background:		transparent url(bg3.jpg) repeat top left;
+	}
+	
+	/* Camera Moves */
+	
+	#verse1.line1 {
+		-webkit-transform: scale(2) translateX(-400px) translateY(-450px);
+	}
+	
+	#verse1.line1.word2 {
+		-webkit-transform: scale(2) translateX(-500px) translateY(-450px);
+	}
+	
+	#verse1.line1.word3 {
+		-webkit-transform: scale(2) translateX(-750px) translateY(-450px);
+	}
+	
+	#verse1.line1.word4 {
+		-webkit-transform: scale(2) translateX(-900px) translateY(-450px);
+	}
+	
+	#verse1.line1.word5 {
+		-webkit-transform: scale(2) translateX(-1100px) translateY(-450px);
+	}
+	
+	#verse1.line2 {
+		-webkit-transform: scale(1.4) translateX(-600px) translateY(-550px);
+	}
+	
+	#verse1.line2.word4 {
+		-webkit-transform: scale(0.8) translateX(-500px) translateY(-550px);
+	}
+	
+	#verse1.line3 {
+		-webkit-transform: scale(2) translateX(-1575px) translateY(-500px);
+	}
+	
+	#verse1.line3.word4 {
+		-webkit-transform: scale(2) translateX(-1700px) translateY(-500px);
+	}
+	
+	#verse1.line4 {
+		-webkit-transform: scale(0.40) translateX(-300px) translateY(-1300px);
+	}
+	
+	#verse1.line5 {
+		-webkit-transform: scale(0.80) translateX(-450px) translateY(-1430px);
+	}
+	
+	#verse1.line6 {
+		-webkit-transform: scale(0.8) translateX(-450px) translateY(-1230px);
+	}	
+	
+	#verse1.line6.word5 {
+		-webkit-transform: scale(0.8) translateX(-1400px) translateY(-1230px);
+	}
+	
+	#verse1.line7 {
+		-webkit-transform: scale(0.4) translateX(-300px) translateY(-2200px);
+	}	
+	
+	#verse1.line7.word3 {
+		-webkit-transform: scale(0.4) translateX(-1150px) translateY(-2200px);
+	}	
+	
+	#verse1.line7.word7 {
+		-webkit-transform: scale(1.2) translateX(-2950px) translateY(-2900px);
+	}	
+	
+	#verse1.line10 {
+		-webkit-transform: scale(0.4) rotate(-20deg) translateX(-450px) translateY(-3130px);
+	}	
+	
+	#verse1.title {
+		-webkit-transform: translateX(-2500px);
+	}	
+	
+	/* End Camera moves */		
+	
+	/* Special Effects */
+	
+	.colour {
+		-webkit-animation:colour 1s infinite;
+	}
+	
+	.mono {
+		-webkit-filter: grayscale(1);
+	}
+	
+	.halfleading {
+		line-height: 0.5em;
+	}	
+	
+	.shake {
+		color:		#FC3;
+		display:	inline-block;
+		-webkit-animation:shake 1s infinite;
+	}	
+	
+	.shadow {
+		box-shadow:		0px 0px 10px #000;
+	}
+	
+	.grow {
+		display: inline-block;
+		-webkit-animation:grow 4s;
+	}
+	
+	.pulse {
+		display: inline-block;
+		-webkit-animation:pulse 0.4s infinite;
+	}
+
+	/* End Special Effects */
+	
+	/* Positioning of typography on stage */
+	
+	#verse1 .line:nth-of-type(1) {
+		position:		absolute;
+		top:			500px;
+		left:			400px;
+		width:			4000px;
+		font-size:		10em;
+	}
+	
+	#verse1 .line:nth-of-type(2) {
+		position:		absolute;
+		top:			900px;
+		left:			250px;
+		font-size:		15em;
+		-webkit-transform:rotate(-90deg);
+		text-align:		right;
+		-webkit-transform-origin:top center;
+	}
+	
+	#verse1 .line:nth-of-type(2) span {
+		display:		block;
+		-webkit-transform:rotate(30deg) translateX(-500px);
+	}
+	
+	#verse1 .line:nth-of-type(2) span.active {
+		-webkit-transform:rotate(30deg) translateX(0);
+	}
+	
+	#verse1 .line:nth-of-type(3) {
+		position:		absolute;
+		top:			550px;
+		left:			1600px;
+		width:			500px;
+		font-size:		5em;
+	}
+	
+	#verse1 .line:nth-of-type(3) span {
+		font-family: 	'Loved by the King', cursive;
+		text-shadow:	none;
+		font-size: 		1.3em;
+	}
+	
+	#verse1 .line:nth-of-type(4) {
+		font-size:		21.5em;
+		position:		absolute;
+		top:			1500px;
+		left:			500px;
+		width:			1500px;
+		padding:		150px;
+		border:			25px dashed #fff;
+	}
+	
+	#verse1 .line:nth-of-type(5) {
+		position:		absolute;
+		font-size:		5em;
+		width:			2500px;
+		top:			1900px;
+		left:			775px;
+	}
+	
+	#verse1 .line:nth-of-type(6) {
+		position:		absolute;
+		font-size:		17em;
+		top:			1300px;
+		left:			500px;	
+		width:			3000px;	
+	}
+	
+	#verse1 .line:nth-of-type(6) span:nth-of-type(8) {
+		display:		inline-block;
+		-webkit-transform:rotate(90deg);
+		-webkit-transform-origin:top left;
+		margin-left:	100px;
+		text-indent:	200px;
+	}
+	
+	#verse1 .line:nth-of-type(7) {
+		position:		absolute;
+		top:			2500px;
+		left:			500px;
+		font-size:		25em;
+		width:			5000px;
+	}
+	
+	#verse1 .line:nth-of-type(8) {
+		position:		absolute;
+		top:			3000px;
+		left:			500px;
+		font-size:		25em;
+		width:			5000px;
+	}
+	
+	#verse1 .line:nth-of-type(9) {
+		position:		absolute;
+		top:			3225px;
+		left:			3075px;
+		font-size:		5em;
+		width:			5000px;
+	}
+	
+	#verse1 .line:nth-of-type(10) {
+		position:		absolute;
+		top:			4000px;
+		left:			500px;
+		font-size:		25em;
+		width:			5000px;
+	}
+	
+	#verse1 .songtitle {
+		width:			960px;
+		height:			540px;
+		position:		absolute;
+		top:			0;
+		left:			0px;
+		background:		transparent url(titleslide.png) no-repeat top left;
+	}
+	
+	#verse2, #verse3 {
+		display:		none;
+	}
+	
+	@-webkit-keyframes shake {
+		0% { -webkit-transform: translateX(-20px) translateY(10px); }
+		10% { -webkit-transform: translateX(0px) translateY(0px); }
+		20% { -webkit-transform: translateX(10px) translateY(10px); }
+		30% { -webkit-transform: translateX(0px) translateY(-10px); }
+		40% { -webkit-transform: translateX(-10px) translateY(0px); }
+		50% { -webkit-transform: translateX(-20px) translateY(10px); }
+		60% { -webkit-transform: translateX(0px) translateY(0px); }
+		70% { -webkit-transform: translateX(10px) translateY(10px); }
+		80% { -webkit-transform: translateX(0px) translateY(-10px); }
+		90% { -webkit-transform: translateX(-10px) translateY(0px); }
+		100% { -webkit-transform: translateX(-20px) translateY(10px); }
+	}
+	
+	@-webkit-keyframes colour {
+		0% { color: #C6F; }
+		10% { color: #C69; }
+		20% { color: #C33; }
+		30% { color: #F90; }
+		40% { color: #FF3; }
+		50% { color: #6F6; }
+		60% { color: #6FC; }
+		70% { color: #69F; }
+		80% { color: #63F; }
+		90% { color: #60F; }
+		100% { color: #93C; }
+	}
+	
+	@-webkit-keyframes grow {
+		0% { -webkit-transform: scale(1); }		
+		50% { -webkit-transform: scale(2) translateX(100px); }	
+		100% { -webkit-transform: scale(2) translateX(100px); }	
+	}
+	
+	@-webkit-keyframes pulse {
+		0% { -webkit-transform: scale(1); }	
+		60% { -webkit-transform: scale(1.2); }
+		75% { -webkit-transform: scale(0.9); }			
+		100% { -webkit-transform: scale(1); }
+	}
